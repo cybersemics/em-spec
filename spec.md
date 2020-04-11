@@ -1,22 +1,32 @@
-- Features (before WorkFlowy import)
-  - =sort  
-    - Alphabetical  
-  - 2-way data sync  
+- em Feature Spec
+  - =view
+    - Article
+      - =view
+        - Table
+      - Author
+        - Raine Revere
+      - Date
+        - April 11, 2020
+      - Avatar
+        - https://avatars1.githubusercontent.com/u/750276?s=460&u=11f8c57114a7b2abd7377da71edf13f4ed911c5f&v=4
+  - =sort
+    - Alphabetical
+  - 2-way data sync
     - You have to be able to handle multiple data stores since you can’t control a 3rd party data store
     - Deal with timing issues, merge conflicts, etc
     - Decentralized interoperability can only be done with standards
-    - The dream of the mashup web  
-  - Ad hoc data source  
+    - The dream of the mashup web
+  - Ad hoc data source
     - Plug in to any data source that can be converted into a list, graph, or tree
-    - Graph → Tree    
-      - Navigate any graph as a tree    
+    - Graph → Tree
+      - Navigate any graph as a tree
     - Decouple linking
-    - How do all these fit together?    
-      - =sort      
-        - Alphabetical      
+    - How do all these fit together?
+      - =sort
+        - Alphabetical
       - ActivityPub
-      - Blockchain      
-        - Too expensive for content storage      
+      - Blockchain
+        - Too expensive for content storage
       - Operational Transforms
       - GraphQL
       - Gossip
@@ -24,66 +34,66 @@
       - Federation
       - OrbitDB
       - Seasons
-      - RDF      
-  - Bind Context  
+      - RDF
+  - Bind Context
     - Establish identity
-    - Are these the same?  
-  - Commands  
+    - Are these the same?
+  - Commands
     - Add child
-    - Add context    
+    - Add context
       - Add as context item (i.e. in context view)
-      - Alternatives      
+      - Alternatives
         - Move cursor to superscript
-        - Hide current context temporarily and edit inline          
+        - Hide current context temporarily and edit inline
     - Back/Forward
     - Context Management
     - https://workflowy.com/#/eec3eccb30e1
     - &nbsp;
-    - Copy/Paste    
+    - Copy/Paste
       - Multiple items
       - From Google Docs
-      - From Word    
-    - Delete Item    
-      - Prompt if has other contexts    
+      - From Word
+    - Delete Item
+      - Prompt if has other contexts
     - Decontextualize/Disunify
     - Move caret up/down
-    - Move item(s) up/down, parent/sibling    
-      - Moving to a completely different location is provided by Context Navigation    
-    - Pin item to top or bottom    
+    - Move item(s) up/down, parent/sibling
+      - Moving to a completely different location is provided by Context Navigation
+    - Pin item to top or bottom
       - Italicize
-      - Use Cases      
-        - Obsolesce        
-          - Examples          
-            - Archived                  
-        - Metacategories        
+      - Use Cases
+        - Obsolesce
+          - Examples
+            - Archived
+        - Metacategories
           - A category that describes its parent rather than provides an instance of its parent
-          - Examples          
+          - Examples
             - Names
-            - Overview                            
+            - Overview
     - Pin to Recently Viewed
     - Semantic Operations
     - https://workflowy.com/#/12d7cfa84be8
     - &nbsp;
-    - Sharing    
-      - Real-time collaborative editing      
-        - operational transforms      
+    - Sharing
+      - Real-time collaborative editing
+        - operational transforms
       - Grant viewing/editing access
-      - Publish in a format that is intuitive for nonusers    
-    - Sorting    
-      - Alphabetical      
+      - Publish in a format that is intuitive for nonusers
+    - Sorting
+      - Alphabetical
         - Autodetect and properly sort dates
         - Optional: Enable if &gt; 3 items
-        - Setting to automatically switch to alphabetical after 3 items      
+        - Setting to automatically switch to alphabetical after 3 items
       - Date Created
       - Date Edited
       - Depth
-      - Manual      
-        - Preserved when switching sorting types      
-      - Weight    
+      - Manual
+        - Preserved when switching sorting types
+      - Weight
     - Undo/Redo
-    - Views #highlight    
-      - Bullets      
-        - Styles        
+    - Views #highlight
+      - Bullets
+        - Styles
           - Different bullet glyphs
           - Numbers (auto increment)
           - Letters (auto increment)
@@ -92,352 +102,352 @@
           - Font size
           - Bold/italic
           - Caps
-          - Margin          
+          - Margin
             - Boolean
-            - Only false if no bullet                  
-        - Justification        
+            - Only false if no bullet
+        - Justification
           - English is read left-to-right
           - Items have to stack vertically
           - Bubbles or other containers add bulk; use space
           - Indentation efficiently communicates hierarchy
-          - Each item needs a bullet or card to differentiate multi-line items          
-            - Due to word wrap, which is better than ellipses or text scaling                        
-      - Headings      
-        - Names        
+          - Each item needs a bullet or card to differentiate multi-line items
+            - Due to word wrap, which is better than ellipses or text scaling
+      - Headings
+        - Names
           - Headings
           - Caption Text
           - Divider Text
-          - Subtext        
-        - Qualities        
+          - Subtext
+        - Qualities
           - Gray
           - Smaller
           - Bulletless
           - No margin
           - ALL CAPS
           - Treated as the same level as its children for expansion purposes
-          - &nbsp;        
-        - Example        
+          - &nbsp;
+        - Example
           - Argument
-          - If...          
+          - If...
             - A
-            - B          
-          - Then...          
-            - C                        
-      - Hidden Level      
-        - One level of categories are hidden and all items are shown in the context of their parent      
-      - Graph View      
+            - B
+          - Then...
+            - C
+      - Hidden Level
+        - One level of categories are hidden and all items are shown in the context of their parent
+      - Graph View
         - Might be clearer for demonstration purposes to render as graph
         - &nbsp;
         - Structured visual representation avoids confusion with traditional Word Processors and emphasizes uniqueness of operations
-        - Layout algorithm      
-      - Category Inlining      
-        - Description        
+        - Layout algorithm
+      - Category Inlining
+        - Description
           - Sometimes you have two categories at the same level (logical type) but you want one category to be implicit and display all its children directly under the supercategory
-          - &nbsp;        
-        - Example        
-          - Before          
-            - Active            
+          - &nbsp;
+        - Example
+          - Before
+            - Active
               - a
               - b
-              - c            
-            - Archived            
-              - d                      
-          - After          
+              - c
+            - Archived
+              - d
+          - After
             - a
             - b
             - c
-            - Archived            
-              - d                                    
-      - Category Flattening      
+            - Archived
+              - d
+      - Category Flattening
         - Display all grandchildren at same level
         - Sometimes we want the category for informational purposes but it's not relevant for viewing
-        - Suggest using Dynamic Context      
-      - Two columns      
-        - Applied to two levels        
+        - Suggest using Dynamic Context
+      - Two columns
+        - Applied to two levels
           - Children
-          - Grandchildren          
-            - Deeper descendants are hidden until zoomed                  
-        - If each child has a single child:        
+          - Grandchildren
+            - Deeper descendants are hidden until zoomed
+        - If each child has a single child:
           - Empty column headers
           - Column 1: Children
-          - Column 2: Grandchildren        
-        - If each child has multiple children:        
+          - Column 2: Grandchildren
+        - If each child has multiple children:
           - Column headers: Children
-          - Grandchildren        
-        - Archive        
-          - Formerly: Table                  
-    - Indent/Deindent    
-      - ✗ Replace with semantic operations to encourage correct logical typing at creation      
-  - Conversation View  
+          - Grandchildren
+        - Archive
+          - Formerly: Table
+    - Indent/Deindent
+      - ✗ Replace with semantic operations to encourage correct logical typing at creation
+  - Conversation View
     - Right (Me)
     - Left (You+)
-    - Me and You+ are values of type ConversationParticipant    
-      - M      
-        - Question        
-          - What’s the difference between a type and a dimension?                  
+    - Me and You+ are values of type ConversationParticipant
+      - M
+        - Question
+          - What’s the difference between a type and a dimension?
     - Subcategory or Detached?
-    - New Thoughts are pinned to Me    
-      - See:      
-        - Pin Context            
-  - Detach  
-    - Names    
+    - New Thoughts are pinned to Me
+      - See:
+        - Pin Context
+  - Detach
+    - Names
       - Detach
       - Flatten
-      - Lock Context    
-    - i.e.:    
-      - Floating Context    
+      - Lock Context
+    - i.e.:
+      - Floating Context
     - Convert categories to floating contexts and back
     - Detached thoughts are not in the current context chain
-    - Tags: Meta    
-      - Simpler than tagging each thought with ./Tags/X, but same functionality      
-        - M        
-          - Questions          
-            - Can this be modeled in a unified way?                        
-      - Equivalent structures      
-        - Level tag and Content        
-          - e.g.          
-            - A            
+    - Tags: Meta
+      - Simpler than tagging each thought with ./Tags/X, but same functionality
+        - M
+          - Questions
+            - Can this be modeled in a unified way?
+      - Equivalent structures
+        - Level tag and Content
+          - e.g.
+            - A
               - MyTag
-              - “=content”              
-                - A content                                            
+              - “=content”
+                - A content
         - Add to context of tag
-        - Hidden tag            
-  - Diachronic annotation  
-    - Names    
-      - Scribe      
-        - Real-time diachronic annotations      
+        - Hidden tag
+  - Diachronic annotation
+    - Names
+      - Scribe
+        - Real-time diachronic annotations
       - Horonote
-      - Anhoronotation    
+      - Anhoronotation
     - Record note over time
-    - Self-replacing    
+    - Self-replacing
       - ✗ append
-      - Spatial co-occurence over time induces synthesis    
-    - Emigration  
-  - Metaprogramming  
-    - Description    
-      - My biggest breakthrough with em recently is the discovery and initial formalization of metaprogramming in em. That is, programming from within em itself self-reflectively operating on the content of em. With metaprogramming, features of em can be implemented in em: Settings is just another context with thoughts like “Theme” it “Font Size” that can be edited directly. Recently Edited Thoughts is just another context. It’s similar to how Search already works, except I am adding templates, type validation, and command triggers so that users can create their own dynamic and interactive contexts. This moves closer to the vision of em’s contextual data model as a universal sensemaking structure.    
-    - Dynamic Commands    
-      - Names      
+      - Spatial co-occurence over time induces synthesis
+    - Emigration
+  - Metaprogramming
+    - Description
+      - My biggest breakthrough with em recently is the discovery and initial formalization of metaprogramming in em. That is, programming from within em itself self-reflectively operating on the content of em. With metaprogramming, features of em can be implemented in em: Settings is just another context with thoughts like “Theme” it “Font Size” that can be edited directly. Recently Edited Thoughts is just another context. It’s similar to how Search already works, except I am adding templates, type validation, and command triggers so that users can create their own dynamic and interactive contexts. This moves closer to the vision of em’s contextual data model as a universal sensemaking structure.
+    - Dynamic Commands
+      - Names
         - Handlers
-        - Hooks      
-      - e.g.      
+        - Hooks
+      - e.g.
         - Next
-        - toggleTaskList        
-          - keyboard          
-            - Option + Shift + T          
-          - gesture          
-            - →←↓→          
-          - else          
+        - toggleTaskList
+          - keyboard
+            - Option + Shift + T
+          - gesture
+            - →←↓→
+          - else
             - +Mode/Task List
-            - ../Mode/Task List          
-          - if          
+            - ../Mode/Task List
+          - if
             - +Mode/Task List
-            - ../Mode/Task List          
-          - then          
+            - ../Mode/Task List
+          - then
             - +Mode/Task List
-            - ../Mode/Task List                  
+            - ../Mode/Task List
         - ../Next/^
-        - -Complete          
-    - Dynamic Contexts    
+        - -Complete
+    - Dynamic Contexts
       - A context whose children are determined by a dynamic (hierarchical) query
       - Children can not trivially be added to indices since they may change
       - Global or context specific
-      - Examples      
-        - /Tasks/Today        
+      - Examples
+        - /Tasks/Today
           - ../Mode/Task List
           - ../Completed
           - OR
           - Completed/.
           - ../Mode/Task List
-          - -Mode        
-        - /Tasks/Completed        
+          - -Mode
+        - /Tasks/Completed
           - ../Mode/Task List
           - Completed/.
-          - ../Mode/Task List        
-        - /Tasks/Next        
-          - Names          
+          - ../Mode/Task List
+        - /Tasks/Next
+          - Names
             - Ready
             - Next
-            - No Due Date          
+            - No Due Date
           - ../Mode/Task List
           - -./Due
           - -./Repeat
-          - -Mode                  
+          - -Mode
     - Errors
-    - Functions    
-      - and      
-        - Intersection of contexts      
-      - command      
+    - Functions
+      - and
+        - Intersection of contexts
+      - command
         - keyboard
         - gesture
         - if
-        - then      
-      - concat      
-        - Names        
-          - or              
-      - filter      
-        - e.g.        
+        - then
+      - concat
+        - Names
+          - or
+      - filter
+        - e.g.
           - /A
-          - /B        
-        - =text        
-          - Name        
+          - /B
+        - =text
+          - Name
         - /A
         - /B
-        - Dynamic Contexts        
+        - Dynamic Contexts
           - A context whose children are determined by a dynamic (hierarchical) query
           - Children can not trivially be added to indices since they may change
-          - Global or context specific              
-      - hidden      
-        - How to efficiently block all descendants from search and context views?      
-      - label      
-        - Names        
+          - Global or context specific
+      - hidden
+        - How to efficiently block all descendants from search and context views?
+      - label
+        - Names
           - Text
-          - Value        
-        - Override thought’s value      
+          - Value
+        - Override thought’s value
       - expanded
       - readonly
-      - schema      
+      - schema
         - Type
-        - Values      
-      - view      
-        - =schema        
+        - Values
+      - view
+        - =schema
           - Type: Options
-          - Values          
+          - Values
             - List
             - Prose
-            - Table                        
-      - Archive      
-        - contextView        
-          - Not persisted                  
-    - Inline Metadata    
+            - Table
+      - Archive
+        - contextView
+          - Not persisted
+    - Inline Metadata
       - Since the search and collate functions can easily
-      - Avoid need for mapping / selector language    
-    - Named Arguments    
+      - Avoid need for mapping / selector language
+    - Named Arguments
       - Render argument name instead of bullet for named arguments
       - Or should argument names be their own subthoughts, just with a range?
-      - Or render named arguments as a table    
+      - Or render named arguments as a table
     - Range
-    - Regexp    
+    - Regexp
       - */5
       - “*”
-      - [bmt]p{\d+}      
-        - bp999        
-          - “Bottom of page 999”                  
-    - Selectors    
-      - Names      
+      - [bmt]p{\d+}
+        - bp999
+          - “Bottom of page 999”
+    - Selectors
+      - Names
         - Predicate
-        - predicate      
-      - Child      
+        - predicate
+      - Child
         - ./X
-        - “x”      
-      - Equals      
+        - “x”
+      - Equals
         - X
-        - “x”      
-      - Parent      
+        - “x”
+      - Parent
         - X/.
         - Archive
-        - “x”      
-      - Sibling      
+        - “x”
+      - Sibling
         - (parent has child X)
         - ../X
         - Archive
-        - “x”      
-      - Uncle      
+        - “x”
+      - Uncle
         - .../X
-        - “x”      
-      - Grandparent      
+        - “x”
+      - Grandparent
         - X//.
         - Archive
-        - “x”      
-      - Grandchild      
+        - “x”
+      - Grandchild
         - .//X
-        - “x”      
-      - Not child      
+        - “x”
+      - Not child
         - -./X
         - “x”
-        - Archive        
+        - Archive
           - ./X/✗
-          - ./!X        
-        - “x”          
+          - ./!X
+        - “x”
     - Predicate syntax
-    - Syntax    
+    - Syntax
       - Thought beginning with “=“ is interpreted as a function
       - Thought beginning with “=“ are interpreted
       - {...} to interpret within a thought (escape)
       - Avoid special forms
-      - Avoid nested escaping      
-        - ✗ BASH          
-    - List possible values (range) as helper text    
-      - e.g.      
-        - Values: Dark, Light          
+      - Avoid nested escaping
+        - ✗ BASH
+    - List possible values (range) as helper text
+      - e.g.
+        - Values: Dark, Light
     - Render ✗ instead of bullet when there is an error
-    - Render argument name instead of bullet for named arguments    
-      - Or should argument names be their own subthoughts, just with a range?    
-    - Archive    
-      - XPath? CSS?      
-        - Can’t select relative to cursor            
-  - Future  
-    - Time lapse    
+    - Render argument name instead of bullet for named arguments
+      - Or should argument names be their own subthoughts, just with a range?
+    - Archive
+      - XPath? CSS?
+        - Can’t select relative to cursor
+  - Future
+    - Time lapse
       - Scrubbing
       - Observe how thoughts develop over time
-      - Analyze the organic development of thoughts      
-  - Hold that thought  
-    - Fades / expires (?) over time  
-  - Hybrid prose-mindmap view  
-    - MOAD    
-      - 28:45    
+      - Analyze the organic development of thoughts
+  - Hold that thought
+    - Fades / expires (?) over time
+  - Hybrid prose-mindmap view
+    - MOAD
+      - 28:45
     - Break lines after connector words
-    - Mini mind map extends off to the right of connector word  
-  - Lock context  
+    - Mini mind map extends off to the right of connector word
+  - Lock context
     - Once a stream of thoughts have been recorded, reorganize them without losing their original context
-    - Same as?  
+    - Same as?
   - Peer-to-peer
-  - Pin Context  
-    - Names    
-      - Lock context      
-        - Once a stream of thoughts have been recorded, reorganize them without losing their original context          
+  - Pin Context
+    - Names
+      - Lock context
+        - Once a stream of thoughts have been recorded, reorganize them without losing their original context
     - New thought are added to the pinned context in addition to the cursor context
     - Thoughts moved stay in the pinned context
-    - Use Cases    
+    - Use Cases
       - Conference
       - Conversation
       - Book
-      - Podcast      
-  - Prose View  
-    - ✗ Not just leaves  
-  - Process operations  
+      - Podcast
+  - Prose View
+    - ✗ Not just leaves
+  - Process operations
     - Description
-    - Instances    
-      - Collapse subcategories      
+    - Instances
+      - Collapse subcategories
         - After grouping a list of thoughts by subcategory, the user may find at a later date that the subcategory is not the primary way in which they want to view the thoughts
         - Yet they do not want to lose the information of the subcategory
         - Therefore they should be able to collapse the subcategory, resulting in a flat list of thoughts, each with the subcategory as a (potentially floating) context
         - What is the storage representation?
-        - Is this a change in storage  representation or view?        
-          - Same as asking whether subcategory is floating or not                    
+        - Is this a change in storage  representation or view?
+          - Same as asking whether subcategory is floating or not
   - Resen: Resilient Citation Engine
-  - Semantic Operations  
-    - Detach subcategory    
-      - Names      
-        - Sublimate Subcategory      
+  - Semantic Operations
+    - Detach subcategory
+      - Names
+        - Sublimate Subcategory
       - Copy children to grandparent
-      - Remove subcategory from parent      
-        - without deleting children            
+      - Remove subcategory from parent
+        - without deleting children
   - Subcategory > Context
-  - Subcategory vs Tag  
-    - Tag    
-      - M      
-        - Questions          
-    - What's the difference between adding a thought to:    
+  - Subcategory vs Tag
+    - Tag
+      - M
+        - Questions
+    - What's the difference between adding a thought to:
       - 1. Subcategory "Cornucopia"
       - 2. Context "Cornucopia"
-      - Same:      
-        - Thought belongs to "Cornucopia"          
+      - Same:
+        - Thought belongs to "Cornucopia"
     - Required or recommended?
-    - See:    
-      - Detach Subcategory      
-  - Thoughtflows  
-    - Names    
+    - See:
+      - Detach Subcategory
+  - Thoughtflows
+    - Names
       - App
       - Automation
       - Declarative
@@ -446,155 +456,155 @@
       - Macros
       - Plugin
       - Programmable Thoughts
-      - Thoughtflow    
-    - Dynamic Commands + Dynamic Contexts  
-  - Tutorial  
-    - Content    
-      - Basics      
-        - Start        
+      - Thoughtflow
+    - Dynamic Commands + Dynamic Contexts
+  - Tutorial
+    - Content
+      - Basics
+        - Start
           - You are now in your own, personal thought space. Everything you write will be stored privately on this device, protected by your device password.
           - To access your thoughts from more than one device, log in with your Google account using the Login link at the bottom of the page.
-          - Now, let’s begin exploring how to record your thoughts with em!          
-            - Model your thinking                  
-        - New Thought        
+          - Now, let’s begin exploring how to record your thoughts with em!
+            - Model your thinking
+        - New Thought
           - ✗
           - First, let me show you how to create a new thought in em using a swipe gesture.
-          - Trace the line below with your finger to create a new thought.        
-        - Type Thought        
+          - Trace the line below with your finger to create a new thought.
+        - Type Thought
           - You did it! Now enter a thought. Anything will do.
-          - Continue button          
-            - You haven’t entered anything yet. I want to make sure you can enter a thought before we move on.                  
-        - New Thought - Repeat        
-          - Good work! Try creating a few more thoughts to get the hang of it.        
-        - Bullet types        
+          - Continue button
+            - You haven’t entered anything yet. I want to make sure you can enter a thought before we move on.
+        - New Thought - Repeat
+          - Good work! Try creating a few more thoughts to get the hang of it.
+        - Bullet types
           - Normal
-          - Cursor bullet        
+          - Cursor bullet
         - Move Cursor
         - New Subhought
-        - New Subthought - Repeat        
-          - You can even try nesting a thought inside a nested thought! Sorry, I get excited about meta-thoughts 😍        
-        - End Part I        
+        - New Subthought - Repeat
+          - You can even try nesting a thought inside a nested thought! Sorry, I get excited about meta-thoughts 😍
+        - End Part I
           - How are you feeling? Would you like to learn more or play on your own?
           - Learn more
-          - Play on my own          
-            - Okay! To resume the tutorial, click the Tutorial link at the bottom of the page.            
-              - Fade in footer                                    
-      - Contexts      
-        - Intro        
+          - Play on my own
+            - Okay! To resume the tutorial, click the Tutorial link at the bottom of the page.
+              - Fade in footer
+      - Contexts
+        - Intro
           - If the same thought appears in more than one place, em shows a small number to the right of the thought.
           - It looks like this: pancake^3
           - Let’s see this in action.
-          - ✗          
-            - This helps you see how your thoughts are connected                  
-        - Create        
+          - ✗
+            - This helps you see how your thoughts are connected
+        - Create
           - First create a subthought “Todo” inside one of your pre-existing thoughts.
-          - It’s okay if it doesn’t make sense. We’re just setting up the correct structure for our example.        
-        - Subthought        
+          - It’s okay if it doesn’t make sense. We’re just setting up the correct structure for our example.
+        - Subthought
           - Now add an item to “Todo”
-          - Do you remember the gesture? hint        
-        - Subthought in Root        
-          - Ah, I see what you did. You added “Todo” to the home screen. 
-          - That makes sense, but for this tutorial, add “Todo” to one of your existing thoughts so that we have the correct structure to proceed.        
-        - Duplicate Thought        
+          - Do you remember the gesture? hint
+        - Subthought in Root
+          - Ah, I see what you did. You added “Todo” to the home screen.
+          - That makes sense, but for this tutorial, add “Todo” to one of your existing thoughts so that we have the correct structure to proceed.
+        - Duplicate Thought
           - Now things are going to get interesting.
-          - Try creating another subthought “Todo” in a different thought.        
-        - Same Context        
+          - Try creating another subthought “Todo” in a different thought.
+        - Same Context
           - Oops! We need to add “Todo” to a different thought in order for this tutorial to make sense.
           - One way to remedy this would be to  drag “Todo” to “x”. You could also create a brand new “Todo” subthought.
-          - I’ll wait.        
-        - Multiple Contexts        
+          - I’ll wait.
+        - Multiple Contexts
           - Very good!
           - Notice the number “2”. This means that “Todo” appears under two different thoughts: “a” and “b”.
-          - Add an item to this second Todo list.        
-        - Context View Start        
+          - Add an item to this second Todo list.
+        - Context View Start
           - Now imagine that you had hundreds and hundreds of thoughts, and you wanted to see what was in your other Todo list without having to search though everything or leave your current thought.
-          - [Tap on “Todo”] and swipe →↑        
-        - Context View Open        
+          - [Tap on “Todo”] and swipe →↑
+        - Context View Open
           - Well, look at that. Both Todo lists in one place. You can even view the first Todo item you created by tapping on “a”.
-          - There are no manual links in em. Simply type a thought, and it is automatically linked to every other identical thought.        
-        - Conclusion        
-          - Here are some real-world examples of linked thoughts:          
+          - There are no manual links in em. Simply type a thought, and it is automatically linked to every other identical thought.
+        - Conclusion
+          - Here are some real-world examples of linked thoughts:
             - Multiple occurrences of a person’s name
             - Keeping track of “Questions” across multiple categories.
-            - Creating a link on the home screen to a deeply nested subthought.          
-          - The more thoughts you add to em, the more useful this feature will become.        
-        - Conclusion II        
+            - Creating a link on the home screen to a deeply nested subthought.
+          - The more thoughts you add to em, the more useful this feature will become.
+        - Conclusion II
           - Congratulations! You have completed the Linked Thoughts tutorial.
           - You now have the skills to create a vast web of thoughts in em.
           - To view a available gestures or to repeat a tutorial, click the Help link in the footer.
-          - Happy Sensemaking!              
-      - Context      
-  - Typed Relationality  
-    - Arity    
+          - Happy Sensemaking!
+      - Context
+  - Typed Relationality
+    - Arity
       - Ternary
-      - Binary    
-    - Context Types    
+      - Binary
+    - Context Types
       - Immediate
-      - Broad      
+      - Broad
         - Names
-        - Names          
-    - Discussion    
-      - Forcing the user to know the type/instance distinction makes it much more likely that it increases cognitive capacity      
+        - Names
+    - Discussion
+      - Forcing the user to know the type/instance distinction makes it much more likely that it increases cognitive capacity
         - Something must happen if it is necessarily novel
-        - Constraint breeds creativity      
+        - Constraint breeds creativity
       - Force plural types?
       - Force no instances in instances?
       - Maps to context-dependent/independent distinction
-      - If they are mutually applicable without constraint, what benefit do they provide?      
+      - If they are mutually applicable without constraint, what benefit do they provide?
         - Maybe just identifying singletons (context independent) is useful enough
-        - A gradual spectrum of ontological force      
-      - Lists (instances) vs Carvings (aspects)      
-        - Open vs Closed        
-          - Carvings may be open too        
-        - Redundancy vs Exclusivity          
+        - A gradual spectrum of ontological force
+      - Lists (instances) vs Carvings (aspects)
+        - Open vs Closed
+          - Carvings may be open too
+        - Redundancy vs Exclusivity
     - False Cognates
-    - Hypotheses    
-      - ?      
+    - Hypotheses
+      - ?
         - Instances must be uncountable, globally unique singletons
-        - Lists may be heterogeneous        
-          - Example          
+        - Lists may be heterogeneous
+          - Example
             - Art (instance)
-            - Books (type)                  
+            - Books (type)
         - Unique
         - Food is an instance
         - Free Composition
         - Non uniques are types
-        - Uniques        
-          - Names          
+        - Uniques
+          - Names
             - Unique instances
             - Singleton
             - Unique
-            - Context Independent          
+            - Context Independent
           - When nonuniques appear in multiple contexts, they refer to different (disparate) things
           - Context dependence (type-of) relationships may stretch across levels
-          - Uniques undermine the meaning of multiple contexts          
+          - Uniques undermine the meaning of multiple contexts
             - A unique in multiple contexts refers to the SAME reference
-            - A non unique...            
-              - which is none other than a type            
-            - ...in multiple contexts refers to DIFFERENT references                  
-        - Uniques undermine the meaning of multiple contextsa      
+            - A non unique...
+              - which is none other than a type
+            - ...in multiple contexts refers to DIFFERENT references
+        - Uniques undermine the meaning of multiple contextsa
       - ✓
-      - ✗      
-        - A leaf is an instance; a nonleaf is a type        
-          - Counter examples:          
+      - ✗
+        - A leaf is an instance; a nonleaf is a type
+          - Counter examples:
             - You can always comment (loose associate) on a leaf, turning it into a nonleaf, which doesn’t change it
-            - You can stop writing at any time, but it is more typical to stop on an instance          
-          - ✗ Counterexample        
-        - A type can always be represented as a plural        
-          - Counter examples          
-            - Qualities            
-              - Exception: if the quality category is reframed as "things with that quality"            
-            - "Example" instead of "Examples"            
-              - When only a single example is presented                      
-          - ✗ Counterexample              
-      - ✓    
-    - Templates    
+            - You can stop writing at any time, but it is more typical to stop on an instance
+          - ✗ Counterexample
+        - A type can always be represented as a plural
+          - Counter examples
+            - Qualities
+              - Exception: if the quality category is reframed as "things with that quality"
+            - "Example" instead of "Examples"
+              - When only a single example is presented
+          - ✗ Counterexample
+      - ✓
+    - Templates
       - (A) includes (B)
       - (A) consists of (B)
       - NOUN (A) is ADJ (B)
-      - Noun (A) is Predicate (B)      
+      - Noun (A) is Predicate (B)
         - Predicate
-        - predicate      
+        - predicate
       - Instance (A) have NOUN (B)
       - NOUN (B) of NOUN (A)
       - (C) is an example (B) of (A)
@@ -603,263 +613,263 @@
       - (C) is one of many (B) (A)
       - (C) a description (B) of (A)
       - Specific Noun (C) is a General Noun (B) of Specific Noun (A)
-      - Instance (C) is a Type (B) of Instance (A)      
-        - Type = Plural category for list of instances      
-      - (D) is part of the description (C) of Binary (B) n-grams (A)    
-    - UI    
-      - English input with parallel hierarchy      
-  - Versioning  
+      - Instance (C) is a Type (B) of Instance (A)
+        - Type = Plural category for list of instances
+      - (D) is part of the description (C) of Binary (B) n-grams (A)
+    - UI
+      - English input with parallel hierarchy
+  - Versioning
     - Identity is a claim of a diachronic sequence of content
-    - Similarity per se does not imply adjacency  
-  - View Sequence  
-    - “Chain of views”    
+    - Similarity per se does not imply adjacency
+  - View Sequence
+    - “Chain of views”
       - Engelbart
       - MOAD
-      - 22:00    
+      - 22:00
     - Sequence of views that forms a kind of presentation
-    - Granular View Addressability    
-      - Parameterize view    
-    - Embedded views  
-  - Views  
-    - Flow Chart    
-      - Render Top → Bottom      
-        - Option for Left → Right      
+    - Granular View Addressability
+      - Parameterize view
+    - Embedded views
+  - Views
+    - Flow Chart
+      - Render Top → Bottom
+        - Option for Left → Right
       - Render each level below the previous, evenly spaced out
       - Draw arrows from Context → Thought
       - Hide bullets
-      - Option to control x,y position of each label      
-  - *Archive  
-    - Dragboard    
+      - Option to control x,y position of each label
+  - *Archive
+    - Dragboard
       - ✗ Obsoleted by split view
       - Non-empty Dragboard must be rendered horizontally to allow text to expand
-      - Text      
+      - Text
         - “ 📎 Clip Board - DROP HERE”
         - “Drop here temporarily”
-        - “Drop here until you find where to put the thought”      
-      - Archive      
-        - Empty Dragboard may be rendered as a small shape if full width is too distracting        
-          - Since most drags will not use the dragboard                    
-  - API  
-    - Technical    
+        - “Drop here until you find where to put the thought”
+      - Archive
+        - Empty Dragboard may be rendered as a small shape if full width is too distracting
+          - Since most drags will not use the dragboard
+  - API
+    - Technical
       - GraphQL
-      - REST      
-        - /login        
-          - GET          
-            - Params            
-              - key            
-            - Output            
+      - REST
+        - /login
+          - GET
+            - Params
+              - key
+            - Output
               - version
-              - token                              
-        - /logout        
-          - POST        
-        - /note/xxxxx        
-          - GET          
-            - Params            
-              - max-depth            
-            - Output            
+              - token
+        - /logout
+          - POST
+        - /note/xxxxx
+          - GET
+            - Params
+              - max-depth
+            - Output
               - id
               - text
               - parent
-              - alias                      
-          - POST          
-            - text            
-              - Add one child            
-            - text[]            
-              - Add multiple children            
-            - json            
-              - Adds nested content            
-            - opml
-            - alias          
-          - PUT          
+              - alias
+          - POST
             - text
-            - alias          
-          - DELETE        
-        - /note/xxxxx/search        
-          - GET          
-            - query                  
-        - /note/xxxxx/empty        
-          - PUT          
-            - Remove all children                  
-        - /note/xxxxx/share        
-          - GET          
-            - Description            
-              - Get all share urls            
-            - Params            
-              - ancestors (optional)              
-                - Include ancestor urls that would make this note shared                                    
-          - POST          
-            - Description            
-              - Creates a unique url that anyone can open            
-            - Params            
-              - name (optional)              
-                - To help keep track of multiple shares urls              
-              - edit              
-                - true/false if users can edit              
-              - restrict              
-                - ids of nested nodes                          
-            - Output            
-              - url                      
-          - PUT          
-            - Params            
+              - Add one child
+            - text[]
+              - Add multiple children
+            - json
+              - Adds nested content
+            - opml
+            - alias
+          - PUT
+            - text
+            - alias
+          - DELETE
+        - /note/xxxxx/search
+          - GET
+            - query
+        - /note/xxxxx/empty
+          - PUT
+            - Remove all children
+        - /note/xxxxx/share
+          - GET
+            - Description
+              - Get all share urls
+            - Params
+              - ancestors (optional)
+                - Include ancestor urls that would make this note shared
+          - POST
+            - Description
+              - Creates a unique url that anyone can open
+            - Params
+              - name (optional)
+                - To help keep track of multiple shares urls
+              - edit
+                - true/false if users can edit
+              - restrict
+                - ids of nested nodes
+            - Output
+              - url
+          - PUT
+            - Params
               - url
               - name (optional)
-              - edit              
-                - Change permissions              
-              - restrict              
-                - Replace the set of restricted notes                                    
-          - DELETE          
-            - Params            
+              - edit
+                - Change permissions
+              - restrict
+                - Replace the set of restricted notes
+          - DELETE
+            - Params
               - url
-              - name (optional)              
-                - Instead delete by name                                            
-        - /note/xxxxx/history        
-          - GET        
-        - /note/xxxxx/rss        
-          - GET        
-        - /stack        
+              - name (optional)
+                - Instead delete by name
+        - /note/xxxxx/history
           - GET
-          - POST          
-            - aka push          
-          - DELETE          
-            - aka pop                  
-        - /search        
-          - GET          
-            - query                  
-        - /history        
-          - GET        
-        - /favorites        
-          - GET        
-        - /recent        
-          - GET        
-        - /rss        
-          - GET              
-      - Webhooks      
-  - Animation  
-    - General    
+        - /note/xxxxx/rss
+          - GET
+        - /stack
+          - GET
+          - POST
+            - aka push
+          - DELETE
+            - aka pop
+        - /search
+          - GET
+            - query
+        - /history
+          - GET
+        - /favorites
+          - GET
+        - /recent
+          - GET
+        - /rss
+          - GET
+      - Webhooks
+  - Animation
+    - General
       - Always use easing
-      - Examples      
-        - After Effects        
+      - Examples
+        - After Effects
           - https://youtu.be/CgeKw1HcYGM
           - https://youtu.be/oqdmeMqphLM
           - https://youtu.be/KvqGrV9UoQs
           - https://youtu.be/b1_p2qQf_Ts
-          - (easing and overlap)        
-        - CSS        
+          - (easing and overlap)
+        - CSS
           - https://cssanimation.rocks/list-items/
           - https://medium.com/@pasql/transitional-interfaces-926eb80d64e3?source=linkShare-d069a785929c-1525483060
-          - https://www.sarasoueidan.com/blog/creative-list-effects/                  
-    - Animations    
-      - Focus      
+          - https://www.sarasoueidan.com/blog/creative-list-effects/
+    - Animations
+      - Focus
         - Content items swing down one-by-one
         - Content fades in
-        - Translate space opening      
-      - Focus anchors      
-        - Commands to navigate in/out or forward/back through focus anchors      
-      - Unfocus (Collapse)      
+        - Translate space opening
+      - Focus anchors
+        - Commands to navigate in/out or forward/back through focus anchors
+      - Unfocus (Collapse)
         - Items swing up one-by-one
         - Translate space closing
-        - Preview swing on start swipe right      
-      - Move      
+        - Preview swing on start swipe right
+      - Move
         - Item moves back out of old space (z)
         - Translate space opening
-        - Item moves forward into new space (z)      
-      - Navigation      
+        - Item moves forward into new space (z)
+      - Navigation
         - Navigating multiple levels deep
-        - Adding content in a deep level      
-      - Text Animations      
+        - Adding content in a deep level
+      - Text Animations
         - Fade up each letter
         - Fade left to right
-        - Typewriter      
-      - Traversal      
+        - Typewriter
+      - Traversal
         - Shift over and fade in/out when navigating
-        - Collapse and move to parent            
-  - Federation  
+        - Collapse and move to parent
+  - Federation
     - Decentralized publication of rdf
     - rdf subset for contextual knowledge graphs
-    - Interpretation protocol of any rdf as generic thought network  
-  - Autofocus  
-    - Names    
+    - Interpretation protocol of any rdf as generic thought network
+  - Autofocus
+    - Names
       - Autofocus
       - Autoexpand
       - Auto expansion
       - Scope
-      - Zoom    
-    - Overview    
+      - Zoom
+    - Overview
       - Attention and working memory have a limited scope
-      - A cybersemic app should similarly limit the items within the visible scope    
-    - Behavior    
-      - Fade      
+      - A cybersemic app should similarly limit the items within the visible scope
+    - Behavior
+      - Fade
         - Progressively fade out ancestors and siblings as you focus deeper
-        - Fade siblings #todo        
+        - Fade siblings #todo
           - Except when cursor is a leaf
-          - Except when cursor is a leaf        
+          - Except when cursor is a leaf
         - Uncles should fade out without fading out parent
         - Great uncles should fade out without fading out grandparent
         - Progressively fade out ancestors and siblings as you focus deeper
-        - Fade siblings #todo        
+        - Fade siblings #todo
           - Except when cursor is a leaf
-          - Except when cursor is a leaf        
+          - Except when cursor is a leaf
         - Uncles should fade out without fading out parent
-        - Great uncles should fade out without fading out grandparent      
-      - Focus Control (optional)      
+        - Great uncles should fade out without fading out grandparent
+      - Focus Control (optional)
         - ability to switch between narrow, medium, and wide focus
-        - ability to switch between narrow, medium, and wide focus      
-      - Pin (optional)      
+        - ability to switch between narrow, medium, and wide focus
+      - Pin (optional)
         - Manually override autofocus to pin state
         - Option A: pin single item open
         - Option B: pin all children open
-        - On any given editing session there is a "root" node which I don't need to see above        
+        - On any given editing session there is a "root" node which I don't need to see above
           - But you can't infer what is the root when jumping around
-          - But you can't infer what is the root when jumping around        
+          - But you can't infer what is the root when jumping around
         - Manually override autofocus to pin state
         - Option A: pin single item open
         - Option B: pin all children open
-        - On any given editing session there is a "root" node which I don't need to see above        
+        - On any given editing session there is a "root" node which I don't need to see above
           - But you can't infer what is the root when jumping around
-          - But you can't infer what is the root when jumping around                  
-    - Archive    
-      - Autoscroll      
+          - But you can't infer what is the root when jumping around
+    - Archive
+      - Autoscroll
         - Better to scroll siblings into view, parents, vertically centered, or no scroll?
         - Mobile users are used to manual scrolling
-        - False negative better than false positive      
-      - Expand all descendants that fit on screen      
-        - Sometimes results in extraneous depth        
-          - Example          
+        - False negative better than false positive
+      - Expand all descendants that fit on screen
+        - Sometimes results in extraneous depth
+          - Example
             - A
             - B
-            - C            
-              - Long note about C that really shouldn’t be expanded all the time even if there is room.            
-            - D            
-              - Technical text pasted from website etc                                    
-      - Fade out levels that haven't been touched in a while      
-        - False positive        
-          - Keeping open for reference        
-        - False negative        
-          - Too slow              
-      - Expand grandchildren if that level is complete      
-        - i.e. all items at that level have a child      
-      - Mixed expand/collapse      
+            - C
+              - Long note about C that really shouldn’t be expanded all the time even if there is room.
+            - D
+              - Technical text pasted from website etc
+      - Fade out levels that haven't been touched in a while
+        - False positive
+          - Keeping open for reference
+        - False negative
+          - Too slow
+      - Expand grandchildren if that level is complete
+        - i.e. all items at that level have a child
+      - Mixed expand/collapse
         - There are many use cases for both expanded and collapsed nodes at the same level
         - I am often working at one level while jumping in and out of children
         - Sometimes I want to see two siblings expanded
-        - &nbsp;            
-  - Public Views  
-    - Names    
+        - &nbsp;
+  - Public Views
+    - Names
       - Public
       - Read-only
-      - Shared    
+      - Shared
     - Share a read-only view on a public url
-    - Choose what that is shown    
+    - Choose what that is shown
       - Top level
-      - Excluded specific descendants    
+      - Excluded specific descendants
     - Updated in real-time
-    - Set public view independently from editing view  
-  - Settings  
+    - Set public view independently from editing view
+  - Settings
     - Icon: top right
     - Night mode
     - Customize command palette
     - Customize Shortcuts & Gestures
     - Customize Editing Palette
-    - Auto Backup Settings    
-      - If device is lost or stolen    
-    - Multivocality  
+    - Auto Backup Settings
+      - If device is lost or stolen
+    - Multivocality

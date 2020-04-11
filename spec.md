@@ -11,6 +11,109 @@
         - https://avatars1.githubusercontent.com/u/750276?s=460&u=11f8c57114a7b2abd7377da71edf13f4ed911c5f&v=4
   - =sort
     - Alphabetical
+  - Dynamic Context
+    - Define children (and optionally grandchildren) via a function
+    - Option to replace children with dynamic children
+    - Access to full content
+    - 3rd party API's
+      - Names
+        - API's
+        - Service Integration
+        - 3rd Party Integration
+        - Data binding
+        - &nbsp;
+        - 3rd party syncing
+        - &nbsp;
+        - Vendor syncing
+        - &nbsp;
+        - Service binding
+        - Service syncing
+        - &nbsp;
+      - Description
+        - Bind a category to any JSON API
+        - &nbsp;
+        - Integrate with specific vendors
+      - Vendors
+        - WorkFlowy
+        - Trello
+        - Google Docs
+        - Todoist
+        - Evernote
+    - Built-ins
+      - Author
+      - Date/Time Created/Modified/Visited
+    - Use Cases
+      - Maintain global list and sublists e.g. cornucopia, heroes
+  - Dynamic Text
+    - ${numChildren}
+    - numDescendants
+    - depth
+    - depthDescendants
+    - ancestors
+    - ancestorTrail
+    - dateCreated
+    - dateModified
+    - now
+    - context
+    - contexts
+    - items
+  - Encryption
+    - End-to-end
+  - *Archive
+    - Card Stack View
+      - Each level is a card
+      - Overlap on left edge
+      - Blur lower cards
+      - Zooming in and out occurs through the z-axis
+    - Enter on empty item to unindent
+      - Changed to add dividing space:
+      - https://workflowy.com/#/f3ead8e5ea8d
+    - Favorites
+      - Just pin recently viewed
+    - Mini Map
+    - Dragboard
+      - Click and drop onto stack
+      - Item becomes ghosted until moved elsewhere
+      - Or just smart copy/paste?
+      - ✗ Obsoleted by split view
+      - Non-empty Dragboard must be rendered horizontally to allow text to expand
+      - Text
+        - “ 📎 Clip Board - DROP HERE”
+        - “Drop here temporarily”
+        - “Drop here until you find where to put the thought”
+      - Archive
+        - Empty Dragboard may be rendered as a small shape if full width is too distracting
+          - Since most drags will not use the dragboard
+    - Multi Selection
+      - Double tap to select
+      - &nbsp;
+      - Tap and swipe
+      - Then how would you scroll?
+        - Button to enable multi-select mode
+        - Button becomes exit multi-select mode
+        - Tap to toggle selection
+        - Exit multi-select mode when no items are selected?
+        - Tap and swipe across to select/deselect siblings and descendants
+    - No scrolling, all gestures
+      - There will always be lists with more items than will fit on the page
+    - Push and pop from stack
+      - Mobile controls
+        - Tap stack to push current focus (or slide out)
+        - Drag title to stack to push
+        - Drag from stack to center to pop (or alt+tab)
+        - Double tap stack to alt+tab
+    - Stream &amp; Consolidate
+      - What is the value?
+      - Stream
+        - Extensive adding
+        - Long items
+        - Minimal editing
+        - Minimal rearranging
+        - Linear
+      - Consolidate
+    - Tap and speak
+      - Large touch screen
+      - Tap with one hand on context and tap other to create an item
   - 2-way data sync
     - You have to be able to handle multiple data stores since you can’t control a 3rd party data store
     - Deal with timing issues, merge conflicts, etc
@@ -38,6 +141,8 @@
   - Bind Context
     - Establish identity
     - Are these the same?
+  - Canonical Form
+    - If content matches a certain form, specific view option becomes available
   - Commands
     - Add child
     - Add context
@@ -223,6 +328,9 @@
       - ✗ append
       - Spatial co-occurence over time induces synthesis
     - Emigration
+  - Dynamic Commands
+    - Expose API that lets you write functions
+    - Bind them to gestures or keyboard shortcuts
   - Metaprogramming
     - Description
       - My biggest breakthrough with em recently is the discovery and initial formalization of metaprogramming in em. That is, programming from within em itself self-reflectively operating on the content of em. With metaprogramming, features of em can be implemented in em: Settings is just another context with thoughts like “Theme” it “Font Size” that can be edited directly. Recently Edited Thoughts is just another context. It’s similar to how Search already works, except I am adding templates, type validation, and command triggers so that users can create their own dynamic and interactive contexts. This moves closer to the vision of em’s contextual data model as a universal sensemaking structure.
@@ -425,12 +533,250 @@
         - Is this a change in storage  representation or view?
           - Same as asking whether subcategory is floating or not
   - Semantic Operations
-    - Detach subcategory
-      - Names
-        - Sublimate Subcategory
-      - Copy children to grandparent
-      - Remove subcategory from parent
-        - without deleting children
+    - Names
+      - Cognitive Operations
+      - Relational Transformations
+      - Structural Operations
+      - Semantic Patterns
+      - Hierarchy Operations
+      - Complexity Expansions
+    - Description
+      - With existing outliners, you have to perform several non-semantic intermediary operations
+        - New item
+        - Move
+        - Indent
+        - Move
+      - We need a single operation that is semantically similar to the operation of our mind
+      - Implemented via Dynamic Commands #highlight
+      - https://workflowy.com/#/460d52303c2c
+      - &nbsp;
+    - Definition
+      - A (simulated) semantic operation is a digital simulacrum of a cognitive operation (mind), contrasted with an editing operation (machine).
+      - A structuring operation is a specific, necessary type of editing operation that converts prose to semantic structure
+        - See Split
+        - See Swap Parent
+    - Operations
+      - =view
+        - Table
+      - MECHANICAL
+        - Split Sentence
+          - Discussion
+            - Not a cognitive operation per say but a way of (de)structuring prose
+          - Types
+            - Split Sentences
+              - Split on period
+            - Split Conjunction
+              - Names
+                - Disjoin
+              - Example 1
+                - Before
+                  - Do this or do that
+                - After
+                  - Do this
+                  - Do that
+              - Example 2
+                - Before
+                  - Its end goal is either communication or action or modification of one's model of reality
+                - After
+                  - End goals
+                    - communication
+                    - action
+                    - modification of one's model of reality
+                    - &nbsp;
+            - Split at cursor
+      - SIMPLE
+        - New item
+        - New category
+          - Creates both new category and placeholder for content
+          - Enter moves to editing content
+          - Not mechanically more efficient, but semantically more accurate
+        - New uncle
+          - Create a new category as a sibling of the current item's category
+        - Categorize one
+          - Names
+            - Abstract Up
+            - Lift
+            - Categorize
+            - &nbsp;
+            - Deepen
+            - Split Down
+            - Subcategorize
+            - Bifurcate
+            - Elevate
+            - Expand
+            - Grow
+            - Promote
+            - Complexify
+            - Evolve
+            - Split
+          - Description
+            - Indents the current item under a new category
+          - Example
+            - Before
+              - Navigation
+                - 🥕I should be able to easily bounce over to another node and back
+                - Methods
+                  - Favorites
+                  - Push/pop
+                  - Recently Edited
+            - After
+              - Navigation
+                - Description🥕
+                  - I should be able to easily bounce over to another node and back
+                - Methods
+                  - Favorites
+                  - Push/pop
+                  - Recently Edited
+        - Categorize selected
+          - Description
+            - You identify that two or three items should have their own category
+        - Categorize all
+          - Description
+            - Indent all items at the current level under a new category
+          - -1
+            - Merge with parent
+              - Description
+                - Move all nodes at current level into parent
+                - Keep parent name by default
+                - Opt-in popup to choose to keep child name instead
+                - Inverse of categorize all
+              - Example
+                - Before
+                  - Interests
+                    - Topics of Interest🥕
+                      - Relationships
+                      - Intimacy
+                      - Addiction
+                - After
+                  - Interests🥕
+                    - Relationships
+                    - Intimacy
+                    - Addiction
+      - COMPLEX
+        - Bump Category → Child
+          - Names
+            - Bump category
+            - Replace parent
+          - Description
+            - Category becomes item of new category alongside former children
+          - Example
+            - Before
+              - a1
+                - a2
+                - a3🥕
+            - After
+              - 🥕
+                - a1
+                - a2
+                - a3
+          - Archive
+            - Swap with Parent
+              - Primary use case covered by Bump Category
+              - &nbsp;
+              - Discussion
+                - Not strictly cognitive but is used in practice
+                - Use case: Finding a simpler name for a category but wanting to keep the old name as an item
+              - Description
+                - Swap the text of the current item with its parent
+        - Bump Category → Subcategory
+          - Description
+            - A random item sparks other thoughts which are added underneath
+            - Then you realize that the sparking thought shouldn't be the root category, but belongs to another subcategory such as Description or Instances.
+            - This operation prompts you to:
+              - 1) Create a new containing category
+              - 2) Bump the sparking thought into a subcategory
+              - 3) Define a new subcategory for the children
+            - Similar to Bump Parent but creates additional intermediary categories
+          - Example
+            - Before
+              - I mean, I did it, but it took a toll🥕
+                - Impulse to go catatonic
+                - Who am I?
+                - Labor trauma?
+                - Embarrassed that I can't do something that others can do
+            - After
+              - 🥕1
+                - 🥕2
+                  - I mean, I did it, but it took a toll
+                - 🥕3
+                  - Impulse to go catatonic
+                  - Who am I?
+                  - Labor trauma?
+                  - Embarrassed that I can't do something that others can do
+        - Detach subcategory
+          - Names
+            - Sublimate Subcategory
+          - Copy children to grandparent
+          - Remove subcategory from parent
+            - without deleting children
+        - Differentiate from siblings
+          - Names
+            - Differentiate
+            - Recategorize
+          - Description
+            - Realize that an item is different enough to be in its own category
+          - Functional Equivalence
+            - categorize + unindent
+            - uncle + item
+          - -1
+            - Merge with sibling
+              - Names
+                - Subsume
+                - Neutralize
+              - Description
+                - Move all children into prev/next sibling then remove current item
+                - Opt-in popup to use name of merged item instead of merge target name
+                - Inverse of Differentiate
+              - Example
+                - Before
+                  - Interests
+                    - Psychology
+                    - Systems Theory
+                  - Topics of Interest🥕
+                    - Relationships
+                    - Intimacy
+                    - Addiction
+                - After
+                  - Interests🥕
+                    - Psychology
+                    - Systems Theory
+                    - Relationships
+                    - Intimacy
+                    - Addiction
+          - Example
+            - Before
+              - Description
+                - Node becomes child of a new containing parent
+                - Make room for nonsiblings (differentiated nodes)🥕
+            - After
+              - Description
+                - Node becomes child of a new containing parent
+              - Purpose🥕
+                - Make room for nonsiblings (differentiated nodes)
+    - Archive
+      - Deparenthesize
+        - Obviated by good habits
+        - Example
+          - Before
+            - Parenthetical additions should be children (Unless it already has children and you don't want to add another level of depth)
+          - After
+            - Parenthetical additions should be children
+              - Unless it already has children and you don't want to add another level of depth
+      - Differentiate &amp; Deepen
+        - Operation more likely to occur before new item is added (therefore allowing Categorize All to intuitively be performed first)
+        - Description
+          - Differentiating when current level needs a new category
+        - Functional Equivalence
+          - categorize all + differentiate
+          - categorize all + categorize + deindent
+        - Example
+          - Before
+            - Animals
+              - Otters
+              - Wallabies
+              - &nbsp;
+              - Weasels
+          - After
   - Subcategory vs Tag
     - Tag
       - M
@@ -635,17 +981,6 @@
       - Draw arrows from Context → Thought
       - Hide bullets
       - Option to control x,y position of each label
-  - *Archive
-    - Dragboard
-      - ✗ Obsoleted by split view
-      - Non-empty Dragboard must be rendered horizontally to allow text to expand
-      - Text
-        - “ 📎 Clip Board - DROP HERE”
-        - “Drop here temporarily”
-        - “Drop here until you find where to put the thought”
-      - Archive
-        - Empty Dragboard may be rendered as a small shape if full width is too distracting
-          - Since most drags will not use the dragboard
   - API
     - Technical
       - GraphQL
@@ -784,6 +1119,31 @@
     - Decentralized publication of rdf
     - rdf subset for contextual knowledge graphs
     - Interpretation protocol of any rdf as generic thought network
+  - Fractal Attention Protocol
+    - Fractal Overlap
+      - Like a melody sung in a "round"
+      - Continuous zoom requires fractal overlap at each level, i.e. always size 1
+        - Size of fracteme = # levels before repeat
+      - Focus size = # visible levels
+        - Unifocus
+        - Multifocus
+      - Rendering function must know how to transition any visual level to its visual superlevel
+      - How to overlap across different forms?
+    - Peer layout function
+      - General function to transition between isomorphisms
+      - Each signifier has an expansion function that defines:
+        - Point of departure for assocemes
+        - Spatial translation of peers
+    - Structure-agnostic network of ideas
+      - I realized that em is not just a content-agnostic structure, but a structure-agnostic network of ideas.
+      - &nbsp;
+      - You should be able to easily switch between forms/isomorphisms
+      - There is an invariant of relationality tying together content fractally. I think I need to develop a fractal navigation protocol based on focus and associativity.
+      - &nbsp;
+  - File Storage
+    - Google Docs integration
+    - Grant permission to read/write files
+    - Mirror context in folders
   - Autofocus
     - Names
       - Autofocus
@@ -855,8 +1215,28 @@
       - Public
       - Read-only
       - Shared
+      - Public
+      - Read-only
+      - Shared
     - Share a read-only view on a public url
     - Choose what that is shown
+      - Top level
+      - Excluded specific descendants
+      - Top level
+      - Excluded specific descendants
+    - Updated in real-time
+    - Set public view independently from editing view
+    - Names
+      - Public
+      - Read-only
+      - Shared
+      - Public
+      - Read-only
+      - Shared
+    - Share a read-only view on a public url
+    - Choose what that is shown
+      - Top level
+      - Excluded specific descendants
       - Top level
       - Excluded specific descendants
     - Updated in real-time
@@ -865,8 +1245,903 @@
     - Icon: top right
     - Night mode
     - Customize command palette
+    - (See
+    - https://workflowy.com/#/5eed3ac34187
+    - )
+    - &nbsp;
+    - Customize Shortcuts &amp; Gestures
+    - (See
+    - https://workflowy.com/#/d44b7f7c05e9
+    - )
+    - &nbsp;
+    - Customize Editing Palette
+    - (See&nbsp;
+    - https://workflowy.com/#/3b7b757d7ffc
+    - )
+    - &nbsp;
+    - Auto Backup Settings
+      - If device is lost or stolen
+      - If device is lost or stolen
+    - Multivocality
+    - https://workflowy.com/#/beae2d97650e
+    - &nbsp;
+    - Icon: top right
+    - Night mode
+    - Customize command palette
     - Customize Shortcuts & Gestures
     - Customize Editing Palette
     - Auto Backup Settings
       - If device is lost or stolen
+      - If device is lost or stolen
     - Multivocality
+  - Social Stream / Timeline
+    - Names
+      - Social Stream
+      - Timeline
+    - Anything added to the Public context is published to your timeline
+    - Archive
+      - ✗ Use # or # + HashTag to add an item to your Social Stream
+        - Why go back to a textual artifact?
+  - Substring Categories
+    - Names
+      - Anchor substrings
+    - Any substring may serve as a category
+    - Multiple substrings in the same item may serve as different categories
+    - Underline anchors
+    - Dim other anchors when one is open
+  - General Editing
+    - Trim end-of-line whitespace
+    - Smart quotes
+    - Preserve keyboard when switching focus #highlight
+    - Hit enter on an empty item to replace with dividing space
+    - Scrolling
+      - Vertical scroll
+      - No horizontal scroll
+        - Makes navigation more difficult
+        - Prevents swipe gestures
+    - Archive
+      - Headings + Bullets
+        - ✗ Bullets needed multiline items
+        - Notes
+          - Looks better than all bullets
+          - Moving between levels not amenable to animation #animation
+        - Levels
+          - h1
+          - h2
+          - bullet / prose
+            - Bullet default
+            - Prose if long
+          - etc
+  - Gestures &amp; Shortcuts
+    - Also see: Commands
+    - Desktop #zoom
+      - Cmd Left
+        - If cursor is not at beginning of line, move to beginning of line (default behavior)
+        - Else move cursor to parent
+      - Cmd Up
+        - Move cursor to parent
+      - Cmd B, I, etc.
+        - Commands
+          - Bold
+          - Italic
+          - &nbsp;
+          - Underline
+          - Strikethrough
+          - Uppercase/Lowercase/Sentence/Original
+        - If no selection, format whole item
+    - Mobile Gestures
+      - Horizontal Gestures
+        - Gesture anywhere
+        - Sequence must start with left or right to avoid scrolling conflict
+        - 26 commands possible with 3 strokes
+          - 2 x 3 x 3 (+ previous levels)
+          - 2, 8, 26
+      - —
+      - Bullet Gestures
+        - ✗
+        - Not contextual to current position
+        - Trigger commands by swiping bullets
+        - Defaults
+          - Left
+            - Delete
+          - Right
+            - Context Management
+          - Up
+            - Move Up
+          - Down
+            - Move Down
+          - Up-Down
+            - Swap content and connect
+          - Up-Right
+            - Move to prev sibling content (indent right)
+              - Do not include as it is so mechanical?
+              - Encourage correct initial relationship
+          - Up-Left
+          - Down-Up
+            - New Uncle
+          - Down-Right
+            - New content
+          - Down-Left
+            - Move to parent context (indent left)
+          - Down-Right-Down
+            - New category
+          - Right-Left
+            - Categorize all
+          - Right-Down
+          - Right-Up
+          - Left-Right
+            - Categorize one
+          - Left-Down
+            - Differentiate
+          - Left-Up
+            - Merge with parent
+          - Left-Up-Right
+            - Merge with previous sibling
+          - Left-Down-Right
+            - Merge with next sibling
+      - Command Palette
+        - Too slow
+        - Not always accessible on mobile
+        - Tap and hold on an item to bring up the command palette
+        - Start animation: Each icon grows and bounces into place
+        - Command palette consists of 8 icons at each of the cardinal and intercardinal directions
+        - A second ring of 8 additional icons can be added in the settings
+        - Drag in direction of icon and release to activate
+        - Holding over icon for 300 ms displays text title of command
+      - Hot Point
+        - Hot point is a circle in the lower center of screen above the keyboard
+          - Tap, hold, and drag to new location
+        - Nullary or current context
+        - No in-place preview
+      - Toolbar Button Command Palette
+        - 5-8 buttons in toolbar above keyboard
+        - Previews the action in realtime
+        - 3-4 distinct directions in 180 degree range
+      - Toolbar Button Gestures
+        - 5-8 buttons in toolbar above keyboard
+        - Tap and hold a button on the toolbar to perform a gesture
+        - 4 gestures possible per button
+          - Up
+          - Up right
+          - Up left
+          - Up down
+        - Less precision needed than command palette
+        - Defaults
+          - Move Cursor (2)
+            - Parent
+            - Previous sibling
+            - Next sibling
+          - Context (5)
+            - Add/Replace x One/All
+            - Uncle
+            - Replace and bump to child
+          - Child (2)
+            - Add
+            - Swap
+          - Intermediary Context (3)
+            - 1, selected, all
+            - Differentiate
+          - Merge (3)
+            - Next Sibling
+            - Previous Sibling
+            - Parent
+    - Quick Type #zoom #z2
+      - Names
+      - #zhide
+        - Mobile Shortcuts
+      - Description
+        - Easy to type on Mobile
+        - A lot quicker than other interactions if you're already typing
+      - Shortcuts
+        - Formatting
+          - bb: bold
+          - - (one dash): short dividing line
+          - -- (two dashes): long dividing line
+        - Semantic Operations
+          - cc: categorize single
+          - ca: categorize all
+        - Archived #zhide
+          - two spaces: indent
+            - This is an mechanical operation and should be replace by a semantic operation
+          - uu: unindent
+    - Touch
+      - Customize in Settings
+      - Defaults
+        - Double tap
+          - Zoom In
+        - Pinch
+          - Control zoom (# levels to show)
+          - Scale text with zoom level
+            - Appropriate minimum and maximum
+        - Swipe from left edge
+          - Open recently edited side drawer
+        - Swipe from right edge
+          - Swap workspace
+          - Alternatives
+            - Change context
+            - Zoom Out
+              - Animation tracks swiping motion
+        - Swipe left
+          - Forward
+            - Animation tracks swiping motion
+        - Swipe right
+          - Back
+            - Animation tracks swiping motion
+        - ✗ Two finger swipe
+  - Groups
+    - Types
+      - Group by
+        - Ad hoc grouping of a given level in the hierarchy
+        - Groupings
+          - Author
+          - Time
+            - Move content to today group as you type
+            - Look to Safari history as reference
+              - This Evening
+              - This Afternoon
+              - This Morning
+              - Wednesday Evening
+              - Tuesday, September 29
+        - Groups instances of some larger class
+          - e.g.
+            - People
+            - Cornucopia
+      - Bunch
+        - Categorize without a name
+        - Categorize by togetherness against others
+        - Completely subsumes dividers
+    - Archive
+      - Tree vs Tag Representation
+        - Tree Representation 1
+          - A
+            - 1
+              - a
+              - b
+          - B
+            - 2
+            - 3
+        - Tag Representation 1
+          - a $1 $A
+          - b $1 $A
+          - 1 $1
+          - 2 $B
+          - 3 $B
+        - Tree Representation 2
+          - C
+            - 1
+              - a
+            - 2
+          - D
+            - 3
+        - Tag Representation 2
+          - a $1 $C
+          - b $1 $A
+          - 1 $1
+          - 2 $C
+          - 3 $D
+  - Import/Export
+    - Import
+      - WorkFlowy (opml)
+        - Autodetect ontological categories
+      - Evernote
+    - Export
+      - opml
+  - Infix Items
+    - Description
+      - A parent may derive it's meaning from situating its children
+      - within
+      - a sentence, i.e. bookends
+      - Start fragment
+        - Ends with an ellipsis...
+      - End fragment
+        - ...starts with an ellipsis
+        - Rendered under the children
+        - Same indentation as parent
+        - No bullet
+    - Editing
+      - Hitting enter twice after an ellipsis splits it into an infix item
+        - And places the cursor in the end fragment after the ellipsis
+    - Example
+      - By examining the...
+        - faculties
+        - activities
+      - ...of the mind
+  - Intersectional Categories #keyconcept
+    - #consolidate
+      - Ontological linking (identity) is not sufficient
+        - Context Dependent
+          - Same signifier, different content because of context
+          - e.g. Todo
+        - Contract Independent
+          - Case 2: Same signifier, same content everywhere
+          - e.g. Cybersemics
+        - Note: Context Type is not (pre)determined by item identity but by usage
+          - e.g. in the context of Journaling, Cybersemics may be context dependent (i.e. a category of journal entries related to Cybersemics that day), but the default expected behavior when writing Cybersemics still its context free form
+    - Names
+      - Alias
+      - Mirroring
+      - Syntagmatic Categories
+      - Intersectional Categories
+      - Signifier Identity
+      - Ontological Linking
+      - Ontological Signifiers
+      - Contexts
+      - Multiple Categories
+      - Seamless Content
+      - Embedded Content
+      - Associative Content
+      - Embedded Linking
+      - Seamless Linking
+      - 1st Class Categories
+      - Internal Linking
+      - Inclusion Nodes
+      - Sync Nodes
+      - Sync
+      - Cross-link
+      - Cross reference
+      - Multiple parents
+      - Nested Link
+      - Circular Reference
+      - Transclusion
+      - Shortcut
+    - Actions
+      - Add present item to another context
+        - Edit inline as parent
+        - Seamlessly transition in parent context (e.g. siblings)
+      - Move to another context
+      - Include/adopt/import item from another context
+      - Hyperlink (internal)
+        - Names
+          - Hyperembedding
+          - &nbsp;
+          - Hyperlink
+          - Tokenization
+          - Symbolization
+          - Masked tags
+        - Description
+          - Mark any word phrase as a linkable tag
+          - Unlike tags, the text can be different than the link
+          - &nbsp;
+          - Really just a different implementation of hyperlinks that link in instead of link out
+      - Merge present item with other item
+        - Options for merging children
+          - Keep present, discard other
+          - Keep other, discard present
+          - Keep both
+            - Order depends on order of merging items
+            - If both manual, opt-in popup option for prefer
+      - Split/Disunify present item
+        - Opt-in popup disunify button on delete
+        - Disappear after a few seconds
+    - Context Navigation #zoom #z2
+      - UI
+        - Superscript links to All Contexts view
+        - Alternatives
+          - Bullet ring
+            - Render small ring around bullet when item has multiple contexts
+            - Not amenable to interaction
+          - Breadcrumbs
+            - Doesn't work for floating zoom since top level changes dynamically
+          - Horizontal swipe
+            - Pan horizontally to swap out contexts inline
+              - Surrounding content fades out and new contextual content fades in
+              - &nbsp;
+              - Doesn't change scroll position
+              - Doesn't swap in new parent, just changes highlight, until released
+            - Render dots at right edge when item has multiple contexts
+              - One dot for each context
+              - Proximate to other contexts
+            - Tap and hold to show other contexts on same line
+              - Reversible delay for 1 second
+              - Do not allow for top level item
+              - Other contexts:
+                - bulleted
+                  - Animated from right dots
+                - faded
+                - elipsized after one word
+          - Mini dots orbiting bullet
+            - Too noisy
+            - Not amenable to rotational panning
+            - Doesn't mirror horizontal panning
+          - Parent ellipsis
+            - Display ellipsis at the end of the parent of the currently selected item
+            - ✗ confusing that ellipsis and superscript are on different elements
+          - Swipe right edge of screen
+            - Better reserved for more frequent action
+      - Observations
+        - Separate menu is too cumbersome and is not compatible with switching in-place
+        - No menu lacks information
+        - Most indexically represented as a sideways/horizontal shift
+        - Navigate to specific context instead of rotating in the dark
+        - Hide other contexts by default; too distracting
+        - Might as well display all children when viewing all contexts; just displaying the titles isn't enough information
+      - See Gestures:
+      - https://workflowy.com/#/088b174a940b
+      - &nbsp;
+    - Description &amp; Terminology
+      - Nodes can have multiple parent nodes
+      - Only one parent node is shown at a time (similar to the sole parent in a traditional bulleted list)
+      - Specialized controls are provided to navigate to new parents or modify parents
+      - Parent nodes are referred to as the "context" of child nodes.
+    - #Examples
+      - You are reading a book (which is under /Books/ or /School/Naropa/'08-09/) and discover a connection to a previous topic. You should be able to record the connection such that it does not belong exclusively to either topic. #writing
+      - You want to mark a topic for later research. "Marking" a topic can be modeled as adding it to a "To Research" context.
+      - &nbsp;
+      - /Home/Residences/Eaton St should appear at the top of /Home when it is my current residence for easy access
+      - /em/Animations should contain all Animation subcategories in /em/Commands
+      - Commitments or Active Projects top-level category contains deeply nested topic
+      - &nbsp;
+      - Todo list
+      - Journal should be subdivided into em and Philosophy
+      - You are modeling a security protocol at your job and you have a question about one step. You should be able to seamlessly add that step to Work + Questions
+    - Ontological Linking
+      - Alternatives
+        - 1. Search
+          - Brings up search box
+          - Actions radio buttons above search box
+          - Autosuggest as you type
+            - (in order)
+            - Top Level Categories
+            - https://workflowy.com/#/9154ca655f1d
+            - &nbsp;
+            - Number of other contexts of children
+            - Exact match
+            - Fuzzy match
+          - Checkbox to search only non-leaf nodes (checked by default)
+          - Use search query language
+          - https://workflowy.com/#/a7a1e8826c2b
+          - &nbsp;
+          - Tap suggestion to complete
+        - 2. Paste Identum
+          - Names
+            - Alias
+            - Entity
+            - Essentia
+            - Identum
+            - Ontum
+            - Onteme
+            - Ontomen
+            - Self
+      - Description
+        - Identical signifiers automatically become the same item (albeit in a different context)
+      - Deep Linking
+        - How to connect multiple levels of depth across concepts?
+        - Example
+          - Onboarding
+            - Survey
+            - Group by Q or Companies
+              - Q1
+                - Coinbase
+                  - A1
+                - MakerDao
+                  - A3
+              - Q2
+                - Coinbase
+                  - A2
+                - MakerDao
+                  - A4
+          - Companies
+            - Coinbase
+              - Survey
+                - Q1
+                  - A1
+                - Q2
+                  - A2
+            - MakerDao
+              - Survey
+                - Q1
+                  - A3
+                - Q2
+                  - A4
+      - Discussion
+        - Simplifies context management as simply adding a child will link the item with the global representation of the child
+        - All words are types
+        - Context = Intersection of all ancestors
+        - New items inherit all contexts of current view
+        - Left commutative
+          - ((em → Features) → v1) → Zoom
+        - Linear vs Global Views
+          - Linear Context View
+            - em → Todo
+          - Global Context View
+            - Todo → em/Habit Tracker/em
+        - Proximity Levels
+          - Identical
+          - Partial
+        - We don’t “remove” from attention
+          - e.g. don’t think of an elephant
+      - Syntagmatic Relations
+        - Names
+          - Intercategory
+          - Intersectional Peer Relations
+        - Description
+          - Contexts in an intersection can have different relationships
+        - Focus/Supra/Context of
+          - Description
+            - Temporary privileging of one syntagm (component of context)
+            - Other contexts of the focused component become peers
+              - Other types of Todo items besides em
+              - Other em items besides Todo
+                - Not relevant if observing Todo items from other contexts
+          - Examples
+            - em → Todo → ...
+              - Todo in the context of em
+            - Todo → em → ...
+              - em in the context of Todo
+        - Equi/Mutual/Joint Context
+          - A + B → ...
+        - Hybrid
+          - C → A + B → ...
+      - UI
+        - Navigation Actions
+          - navigate
+            - gesture: double tap
+          - intersect ⋂ (with parent context)
+            - gesture: tap
+            - Archive
+              - double tap and drag up to intersect with active context
+                - Is the only valid operand one of the components of the active context?
+          - union ∪
+            - gesture: triple tap
+        - Creating a child implicitly creates a subcategory in the other context equal to the parent category
+          - Or other signifier
+            - Examples
+              - Journal → 2018 → 7/25 → PhD
+                - Journal
+              - Thoughts → em → Fear → A B C
+                - Journal → Fear
+        - Indicate when an identum has other contexts
+          - superscript number
+        - Choose any view as home/startup view
+        - Simultaneous tap for intersection
+        - Highlight components of Active Context
+          - tap to remove from active context
+      - Archive
+        - Manually add intersections
+          - ✗ Too cumbersome
+          - tap ADD and type “TODO”
+          - &nbsp;
+          - suggest “TODO + Intersectional Categories + em”
+          - suggest “TODO + em”
+          - otherwise type "TODO + other”
+        - Differentiate CxD and CxI
+          - ✗ not necessary with navigation actions or hops
+            - If context dependence is a property of the identum itself, then wouldn’t that eschew the need for a differentiated gesture at navigation time?
+            - No, because navigation still could be to the CxD or CxI view of the identum
+          - CxD
+            - e.g. Doctorate
+            - of
+            - Cyberpensics
+            - line from parent
+            - open/closed bullet
+          - CxI
+            - e.g. Cyberpensics → em
+        - Doubt tap + gesture
+          - Double tap and then gesture to allow four directions
+        - TODO likely not visible
+          - tap and drag ADD icon to TODO
+          - double tap + down on TODO
+        - double tap + down on NEW (+)
+          - ✗ only works if TODO doesn’t exist yet
+        - Deferred merge choice
+          - Choice to include is made later at associate point/in other context
+          - e.g. Does this belong here?
+          - No, because then the link from the editing context is not established
+        - Root context determiner
+          - if other is a root context...
+          - Then
+            - add subcategory
+          - Exception
+            - Process Modeling → States →
+            - Stress Points
+        - Optimistic merge
+          - ✗ Confusing to have children from other context inserted
+            - False positive
+          - When duplicate signifier appears, show global content faded out
+          - Stays faded for 30 seconds
+          - Then it locks in the association, although it can be disconnected
+          - &nbsp;
+        - Union
+          - If other context has more than one leaf child, union content, otherwise create subcategory
+          - Or leave as viewing option?
+          - e.g. Cornucopia - flat or grouped
+    - Theory #theory
+      - Ideas/concepts can exist within more than one context
+      - Tags are awkward
+        - Separate entity
+        - Artifact
+        - Suprastructural
+      - Multiple parents = many-to-many = graph
+      - Allows a hierarchy of contexts to co-exist
+    - Types
+      - Cross-cutting category (0)
+        - Female Role Models
+      - Process (1+)
+        - Commenting on or referring to an idea at higher logical level
+        - Subtype: Personal category
+          - People to learn more about
+          - Exciting ideas
+  - Multivocality
+    - Names
+      - Agnosticism
+      - Multivocality
+      - Nonfinalism
+      - Noncommitalism
+    - Names of categories may vibrate/equivocate between several possible representations rather than be represented with a final, univocal name
+    - Represent multiple names with "/"
+      - e.g. Nonfinalism/Agnosticism/Noncommitalism
+      - e.g. zoom/scope
+    - Activate - first by default
+    - Inactive - subsequent
+    - Display possibilities
+      - (...)
+      - ... subscript
+      - Faded
+    - Tap an active name to cancel
+    - Tap an inactive name to make it active
+      - moves it to the beginning
+      - updated fading
+    - Type two slashes to include all previous spaces since the starting "/"
+    - Can be turned off in settings
+  - Moving Items
+    - Double tap to "lift" an item
+      - Floats on screen independent of navigation
+      - Leaves imprint of starting location
+      - Draggable
+      - Can float multiple items
+    - Alternatives
+      - Movement Handle
+        - Show handle next to item while editing to allow tap-and-drag movement
+        - Show handle for multiple selected items
+      - Workflowy-style
+        - Tap and drag to adjust indentation and order in real-time
+  - Offline Mode
+    - Automatically merge conflicting data after reconnecting with best guess
+  - Performance
+    - Initial app load time &lt; 1s
+    - Support up to 1,000,000 items without sensible performance impact #highlight
+  - Pin Context for New Items
+    - Description
+      - When enabled, all new items are also added to the specified category
+    - Use Case
+      - On retreat
+      - Book
+  - Recently Viewed
+    - Algorithm
+      - Caret touching item for more than 2 seconds counts as recently viewed
+      - Use parent of all leaf nodes
+      - Use nearest Top Level Category ancestor
+        - See Category Typing
+        - https://workflowy.com/#/c86d982829e0
+        - &nbsp;
+      - If user bounces back and forth between parent and children, record the parent
+      - If user spends the majority of time on a single child, record the child
+    - Observations
+      - Example Paths
+        - Home &gt; Projects of Inspiration &gt; Journaling App &gt; Design &gt; Navigation
+        - Live Processing &gt; Maitri II &gt; Main Actions
+        - Home &gt; Live Processing &gt; Maitri II &gt; Wed 2/25 &gt; World of Self &gt; Exit Strategies &gt; Connect with others
+      - Example Sizes
+        - [1]
+        - [1]- 2
+        - 4- 10- [10]
+        - 31- 36- [8]
+        - [1]- [2]- 1- x
+        - 31-[18]- [11]- 2
+        - 4- 10- [7]- 5- 3- 2
+        - 12- 8- x-[7]- 3- 3
+        - 16- 12- [8]-30-[2]- 1- 1-2
+        - 16- 3- 6-[5]- 7-[6]-[12]-1
+      - Half of depth, rounded up (towards leaves)
+        - 1/2
+        - 2/3
+        - 2/4 or 2/5
+        - 3/5
+      - Each entry is at least 2 nodes away from other entries
+      - Parent with most children near center
+      - Rarely less than half
+      - One cannot distinguish main categories from subcategories based on height
+      - Single chain → lower main category
+      - A main category is never an only child
+    - Grouping
+      - Current group header sticks to top
+      - Group by Time Viewed
+      - Look to Safari history as reference&nbsp;
+        - This Evening
+        - This Afternoon
+        - This Morning
+        - Wednesday Evening
+        - Tuesday, September 29
+      - Archive
+        - Logarithmic sorting within 48 hrs
+          - 1 min
+          - 2 min
+          - 4 min
+          - 8 min
+          - 16 min
+          - 32 min
+          - 64 min
+          - 2 hrs, 8 min
+          - 4 hrs, 16 min
+          - 8 hrs, 32 min
+          - 17 hrs, 4 min
+          - &nbsp;
+          - More
+            - 1 day, 10 hrs
+            - 2 days, 20 hrs
+            - 4 days, 6 hrs
+            - &nbsp;
+            - 1 week, 1 day
+            - 2 weeks, 2 days
+            - 1 month
+            - 2 months
+            - 4 months
+            - 8 months
+            - 1 yr, 4 months
+        - Linear x10
+          - 1 min
+          - 10 min
+          - 100 min
+          - 1,000 min - 16.7 hrs
+          - 10,000 min - 6.9 days
+          - 100,000 min = 9.9 weeks
+          - 1,000,000 min = 22.8 months
+    - Display
+      - e.g.
+        - Design
+        - (Home &gt; Projects of Inspiration &gt; Journaling App)
+        - &nbsp;
+        - Kiva Finance
+        - (Home &gt; Projects of Inspiration)
+        - &nbsp;
+        - Questions
+        - (Home &gt; Skills &gt; Guitar)
+        - &nbsp;
+      - Archived
+        - Home &gt; Projects of Inspiration &gt; Journaling App &gt; Design
+        - Home &gt; Projects of Inspiration &gt; Kiva Finance
+        - Home &gt; Skills &gt; Guitar &gt; Questions
+    - Normal command palette on long hold
+    - Pin to top
+    - Archived
+      - Clustering
+        - Head
+        - The entry that represents the cluster in the list
+          - Don't count root or leaves
+          - Option 1: Oldest ancestor in cluster
+            - Not including root
+          - Option 2: Last visited
+          - Option 3: Register parent of density level
+            - Level with most sibling edits
+            - &nbsp;
+        - Merging Clusters
+        - Refresh timestamp if visited from the recently viewed list
+      - Temp items
+        - Navigating to a note registers it temporarily
+        - &nbsp;
+        - If a close relative is navigated, replace the temp
+          - This should be replaced by the oldest ancestor rule
+        - After 30 seconds, temp nodes become permanent
+          - What if intervening notes are edited?
+      - Editing permanently registers the note
+        - Unless it is part of a cluster of edits
+        - &nbsp;
+        - This may be unnecessary if clustering can work identically for edits and visits
+        - &nbsp;
+      - User tagged major categories as such?
+  - Revision History
+    - TBD
+  - Search
+    - Icon: top right
+    - Regex
+    - Autopopulate selected word
+    - Search partial or exact
+    - Easily switch between searching whole document and searching subdocument
+    - Search &amp; Replace
+    - &nbsp;
+    - Show results like WorkFlowy, except:
+      - Multiple intermediary levels are collapsed into breadcrumb format, e.g. Recently Viewed &gt; Archived &gt; Algorithm &gt; Other...
+    - Exclude categories
+      - Archive(d/s)
+    - Query language
+      - Segmentation
+        - "exact match"
+      - Conditions
+        - parent:
+        - child:
+        - above:
+        - below:
+      - Relations
+        - AND
+        - OR
+        - NOT
+    - Checkbox to search only categories/end thoughts
+  - Future Ideas
+    - AR
+      - Write text into physical environment
+      - Content stays in place
+      - Unlock to relocate
+      - As soon as you have items in a physical space, you want manipulate them physically
+      - &nbsp;
+      - Ideascape
+      - How to reconcile physical categorization with abstract categorization?
+        - Physicality is independent
+        - Draw a line between physical objects to create non-physical relationship?
+    - Awareness Facilitation
+      - Facilitate stream &amp; consolidate
+      - Highlight areas of potential refactoring
+        - Redundant/disconnected concepts
+        - &gt;7 children (too large for working memory)
+    - Change Tracking
+      - Mark creation date of each entry
+      - Keep track of last modified date per character range
+      - Vertical timeline of edits (like Heroku uptime)
+      - Time series of edits
+      - List of most edited within given time span
+      - Multilevel diff
+      - Playback
+      - Changelog
+      - Change notifications
+    - Consolidation
+      - Names
+        - Bound and unbound ideas
+        - &nbsp;
+        - Consolidation
+        - Integration
+      - The first spark might just be an association
+      - It takes active thinking to determine the particular nature to the relatum
+      - What about visually (and functionally) rendering child idea unbounded before they are categorized
+      - &nbsp;
+      - Display integration statistics
+        - integration %
+        - average age of unintegrated
+        - &nbsp;
+        - rate of integration
+    - Eye tracking navigation
+    - Grammar Simplification
+      - Examples
+        - It would give me a chance to do some fun coding
+          - Fun Coding
+        - I cannot allow myself to become isolated
+          - Isolated
+    - Layers of Cohesion
+      - Preserve stream layer
+    - Metrics
+      - Names
+        - Analytics
+      - Is there structure that exists independent of the content?
+        - Are leaf nodes longer than internal nodes?
+        - Is there a consistent ratio of height:depth or breadth:depth?
+        - What are the average number of children?
+        - How much compression occurs in consolidation?
+        - Can categories be determined from the structure?
+          - See Observations;
+          - https://workflowy.com/#/980e83d3d246
+      - Depth
+      - Breadth
+      - &nbsp;
+      - Volume
+      - &nbsp;
+      - Density
+        - average node length
+      - Novelty
+        - relatable to past nodes
+      - Speed
+      - Lifespan
+      - Pulse
+        - Activity over time, like github
+        - &nbsp;
+    - (Micro)Diachronic Semantics
+      - Trace the development/evolution/unfolding/ontogeny of concepts
+      - Concepts are subsumed/cannibalized, leaving a trace
+      - Boundaries/scopes can be established between sessions/temporal clusters
+        - Explicit or implicit
+      - Unsubsumed concepts/subconcepts are preserved, although become either incorporated or fossilized in relation to living concepts
+      - Lineage/Archeology of Concept
+    - Public Web
+      - New web of implicit links
+      - Spam/Sybil attack
+      - More general selection/search/IR problem
+    - Track category name changes
+    - Zip and unzip parallel lists
+      - e.g. FCD &amp; Live Processing

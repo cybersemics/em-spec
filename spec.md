@@ -401,7 +401,6 @@
   - Lock context
     - Once a stream of thoughts have been recorded, reorganize them without losing their original context
     - Same as?
-  - Peer-to-peer
   - Pin Context
     - Names
       - Lock context
@@ -425,7 +424,6 @@
         - What is the storage representation?
         - Is this a change in storage  representation or view?
           - Same as asking whether subcategory is floating or not
-  - Resen: Resilient Citation Engine
   - Semantic Operations
     - Detach subcategory
       - Names
@@ -433,7 +431,6 @@
       - Copy children to grandparent
       - Remove subcategory from parent
         - without deleting children
-  - Subcategory > Context
   - Subcategory vs Tag
     - Tag
       - M
